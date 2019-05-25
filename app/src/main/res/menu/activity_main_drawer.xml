@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_active"
+            android:icon="@drawable/home"
+            android:title="Active Orders" />
+        <item
+            android:id="@+id/nav_earning"
+            android:icon="@drawable/home"
+            android:title="Earning" />
+        <item
+            android:id="@+id/nav_wallet"
+            android:icon="@drawable/home"
+            android:title="Wallet" />
+        <item
+            android:id="@+id/nav_wish"
+            android:icon="@drawable/home"
+            android:title="Wish list" />
+        <item
+            android:id="@+id/nav_earn"
+            android:icon="@drawable/home"
+            android:title="Reffer n Earn" />
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/home"
+            android:title="Track Orders" />
+        <item
+            android:id="@+id/nav_coupon"
+            android:icon="@drawable/home"
+            android:title="My Coupons" />
+        <item
+            android:id="@+id/nav_manager"
+            android:icon="@drawable/home"
+            android:title="Adress Management" />
+
+        <item
+            android:id="@+id/nav_care"
+            android:icon="@drawable/home"
+            android:title="Coustomer Care" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_how"
+                android:icon="@drawable/home"
+                android:title="How it Works" />
+            <item
+                android:id="@+id/nav_faq"
+                android:icon="@drawable/home"
+                android:title="FAQs" />
+        </menu>
+    </item>
+
+</menu>
