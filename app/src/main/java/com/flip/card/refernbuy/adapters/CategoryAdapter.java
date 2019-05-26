@@ -76,7 +76,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
         }
         else
         {
-            holder.linear_layout.setBackgroundColor(context.getResources().getColor(R.color.grey));
+            holder.linear_layout.setBackgroundColor(context.getResources().getColor(R.color.lightgrey));
         }
     }
 

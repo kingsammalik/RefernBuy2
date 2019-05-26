@@ -18,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.flip.card.refernbuy.Fragments.CartFragment;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     public BottomNavigationView bottomNavigationView;
+    SearchView searchView;
 
 
     @Override
@@ -73,13 +75,14 @@ public class MainActivity extends AppCompatActivity
 
                         HomeFrag homeFragment = new HomeFrag();
                         transaction.replace(R.id.main_fragment_container, homeFragment).commit();
-
+                        hideSearch();
                         break;
 
                     case R.id.nav_category:
 
                         CategoryFragment categoryFragment = new CategoryFragment();
                         transaction.replace(R.id.main_fragment_container, categoryFragment).commit();
+                        showSearch();
 
                         break;
 
@@ -118,8 +121,17 @@ public class MainActivity extends AppCompatActivity
     private void initView() {
 
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        searchView = (SearchView)findViewById(R.id.seachview);
 
 
+    }
+
+    public void hideSearch(){
+        searchView.setVisibility(View.GONE);
+    }
+
+    public void showSearch(){
+        searchView.setVisibility(View.VISIBLE);
     }
 
     @Override
