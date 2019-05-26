@@ -104,6 +104,8 @@
                 android:text="   Buying with friend?"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp"
+                android:gravity="center|start"
+                android:drawableLeft="@drawable/profile"
                 android:layout_margin="5dp"
                 android:background="@color/lightgrey"/>
 
