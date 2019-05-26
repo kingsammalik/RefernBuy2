@@ -14,9 +14,11 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <SearchView
+            android:id="@+id/seachview"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="5dp"
+            android:visibility="gone"
             android:autofillHints="Search For Product and More"
             android:background="@drawable/rounded_seachview"
             tools:targetApi="honeycomb" />

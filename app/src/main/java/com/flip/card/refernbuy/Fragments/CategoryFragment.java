@@ -70,6 +70,12 @@ public class CategoryFragment extends Fragment implements CategoryAdapter.CallBa
         catList.add(new BaseModel("1","Luggage"));
         catList.add(new BaseModel("1","Watch"));
         catList.add(new BaseModel("1","Jewellary"));
+        catList.add(new BaseModel("1","Shoes"));
+        catList.add(new BaseModel("1","Clothing"));
+        catList.add(new BaseModel("1","Bag"));
+        catList.add(new BaseModel("1","Luggage"));
+        catList.add(new BaseModel("1","Watch"));
+        catList.add(new BaseModel("1","Jewellary"));
         mAdapter.notifyDataSetChanged();
     }
 
