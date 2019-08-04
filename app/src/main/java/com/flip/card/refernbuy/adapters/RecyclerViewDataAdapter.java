@@ -79,7 +79,7 @@ public class RecyclerViewDataAdapter extends RecyclerView.Adapter<RecyclerViewDa
             public void onClick(View v) {
 
 
-                Toast.makeText(v.getContext(), "click event on more, "+sectionName , Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(), "Timer is going on sale, " , Toast.LENGTH_SHORT).show();
 
 
 

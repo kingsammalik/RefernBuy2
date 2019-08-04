@@ -15,9 +15,10 @@
             android:layout_width="match_parent"
             android:layout_height="405dp">
             <LinearLayout
-                android:background="@color/colorPrimaryDark"
+                android:background="@drawable/profile_background"
                 android:layout_width="match_parent"
                 android:layout_height="280dp"
+                android:scaleType="fitXY"
                 android:orientation="vertical">
 
 

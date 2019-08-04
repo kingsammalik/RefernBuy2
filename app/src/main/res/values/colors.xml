@@ -7,5 +7,8 @@
     <color name="selected">#F4875E</color>
     <color name="lightgrey">#F3F8FC</color>
     <color name="button_blue">#218BC6</color>
+    <color name="white">#FFFFFF</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="primary">#E43F3F</color>
 
 </resources>

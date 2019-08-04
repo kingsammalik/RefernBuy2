@@ -27,7 +27,7 @@ public class CategoryProductAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 15;
     }
 
     @Override

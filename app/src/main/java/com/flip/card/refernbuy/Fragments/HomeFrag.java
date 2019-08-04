@@ -3,6 +3,7 @@ package com.flip.card.refernbuy.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import com.flip.card.refernbuy.R;
 import com.flip.card.refernbuy.adapters.RecyclerViewDataAdapter;
 import com.flip.card.refernbuy.models.SectionDataModel;
 import com.flip.card.refernbuy.models.SingleItemModel;
+import com.liuzhuang.afgridlayout.AutoFitGridLayout;
 import com.smarteist.autoimageslider.DefaultSliderView;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.SliderAnimations;
@@ -30,6 +32,7 @@ import java.util.ArrayList;
 public class HomeFrag extends Fragment {
     SliderLayout sliderLayout;
     ArrayList<SectionDataModel> allSampleData;
+    AutoFitGridLayout autoFitGridLayout;
 
 
     public HomeFrag() {
@@ -58,6 +61,16 @@ public class HomeFrag extends Fragment {
 
 
         RecyclerView my_recycler_view = (RecyclerView)view.findViewById(R.id.my_recycler_view);
+        autoFitGridLayout = (AutoFitGridLayout)view.findViewById(R.id.grid);
+
+        autoFitGridLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                CategoryListing categoryListing = new CategoryListing();
+                transaction.replace(R.id.main_fragment_container, categoryListing).commit();
+            }
+        });
 
         my_recycler_view.setHasFixedSize(true);
 
@@ -120,7 +133,7 @@ public class HomeFrag extends Fragment {
 
             ArrayList<SingleItemModel> singleItem = new ArrayList<SingleItemModel>();
             for (int j = 0; j <= 5; j++) {
-                singleItem.add(new SingleItemModel("Item " + j, "URL " + j));
+                singleItem.add(new SingleItemModel("₹ 200 ", "URL " + j));
             }
 
             dm.setAllItemsInSection(singleItem);

@@ -11,17 +11,46 @@
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/lightgrey"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <SearchView
-            android:id="@+id/seachview"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:visibility="gone"
-            android:autofillHints="Search For Product and More"
-            android:background="@drawable/rounded_seachview"
-            tools:targetApi="honeycomb" />
+            android:layout_height="wrap_content"
+            android:background="@color/lightgrey"
+            android:orientation="horizontal"
+            android:id="@+id/linear"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/rite" />
+
+            <SearchView
+                android:id="@+id/seachview"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:autofillHints="Search For Product and More"
+                android:background="@drawable/rounded_seachview"
+                tools:targetApi="honeycomb" />
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/notifications" />
+
+
+        </LinearLayout>
+
+
+
 
       <!--  <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"

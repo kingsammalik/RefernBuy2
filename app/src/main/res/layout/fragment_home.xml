@@ -1,8 +1,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/lightgrey"
     tools:context="com.flip.card.refernbuy.Fragments.HomeFrag">
 
@@ -12,23 +12,38 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/lightgrey"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/hamburger" />
 
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/header"/>
+                    android:layout_marginLeft="80dp"
+                    android:background="@drawable/header" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/notifications" />
 
 
             </LinearLayout>
-
 
 
             <SearchView
@@ -41,91 +56,106 @@
 
 
             <com.smarteist.autoimageslider.SliderLayout
+                android:id="@+id/imageSlider"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_margin="5dp"
-                android:id="@+id/imageSlider">
-            </com.smarteist.autoimageslider.SliderLayout>
+                android:layout_margin="5dp"></com.smarteist.autoimageslider.SliderLayout>
 
-            <com.liuzhuang.afgridlayout.AutoFitGridLayout
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+            <com.liuzhuang.afgridlayout.AutoFitGridLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/grid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:background="@android:color/white"
                 app:columnCount="4">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:background="@drawable/apparel"
+                    android:gravity="center" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="@drawable/beauty"
+                    android:gravity="center" />
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="90dp"
-                    android:gravity="center"
-                    android:background="@drawable/apparel"/>
+                    android:background="@drawable/shoes"
+                    android:gravity="center" />
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
-                    android:gravity="center"
-                    android:background="@drawable/beauty"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="90dp"
-                    android:gravity="center"
-                    android:background="@drawable/shoes"/>
+                    android:background="@drawable/electronics"
+                    android:gravity="center" />
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
-                    android:gravity="center"
-                    android:background="@drawable/electronics"/>
+                    android:background="@drawable/furniture"
+                    android:gravity="center" />
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
-                    android:gravity="center"
-                    android:background="@drawable/furniture"/>
+                    android:background="@drawable/ho"
+                    android:gravity="center" />
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
-                    android:gravity="center"
-                    android:background="@drawable/ho"/>
+                    android:background="@drawable/stationary"
+                    android:gravity="center" />
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="90dp"
-                    android:gravity="center"
-                    android:background="@drawable/stationary"/>
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:gravity="center"
-                    android:background="@drawable/ho"/>
+                    android:background="@drawable/ho"
+                    android:gravity="center" />
             </com.liuzhuang.afgridlayout.AutoFitGridLayout>
 
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="   Buying with friend?"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="18dp"
-                android:gravity="center|start"
-                android:drawableLeft="@drawable/profile"
-                android:layout_margin="5dp"
-                android:background="@color/lightgrey"/>
+                android:background="@color/white"
+                android:orientation="vertical">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:focusable="false"
-                android:layout_margin="5dp"
-                android:hint="    Enter Order Number"
-                android:background="@drawable/rounded_editbox"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/profile"
+                    android:gravity="center|start"
+                    android:text="   Buying with friend?"
+                    android:textColor="@color/button_blue"
+                    android:textSize="17dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/editbox_white_back"
+                    android:drawableEnd="@drawable/fill_arrow"
+                    android:focusable="false"
+                    android:hint="    Enter Order Number" />
+
+            </LinearLayout>
+
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/rounded_button"
                 android:text="Elegance"
                 android:textColor="@android:color/white"
-                android:layout_margin="5dp"
-                android:textSize="15dp"
-                android:background="@drawable/rounded_button"
-                />
+                android:textSize="15dp" />
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/my_recycler_view"
@@ -136,13 +166,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="    Trending Products"
-                android:textSize="15dp"
                 android:layout_margin="5dp"
-                />
+                android:text="    Trending Products"
+                android:textSize="15dp" />
 
-            <com.liuzhuang.afgridlayout.AutoFitGridLayout
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+
+            <com.liuzhuang.afgridlayout.AutoFitGridLayout xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -152,46 +181,50 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="200dp"
-                    android:gravity="center"
-                    android:background="@drawable/pro1"/>
+                    android:background="@drawable/pro1"
+                    android:gravity="center" />
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:gravity="center"
-                    android:background="@drawable/pro2"/>
+                    android:background="@drawable/pro2"
+                    android:gravity="center" />
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="200dp"
-                    android:gravity="center"
-                    android:background="@drawable/pro1"/>
+                    android:background="@drawable/pro1"
+                    android:gravity="center" />
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:gravity="center"
-                    android:background="@drawable/pro2"/>
+                    android:background="@drawable/pro2"
+                    android:gravity="center" />
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:gravity="center"
-                    android:background="@drawable/pro1"/>
+                    android:background="@drawable/pro1"
+                    android:gravity="center" />
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:gravity="center"
-                    android:background="@drawable/pro2"/>
+                    android:background="@drawable/pro2"
+                    android:gravity="center" />
 
             </com.liuzhuang.afgridlayout.AutoFitGridLayout>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/load_more_button"
                 android:text="Load More Products"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
-                android:layout_margin="5dp"
-                android:textSize="15dp"
-                android:background="@drawable/load_more_button"
-                />
+                android:textSize="15dp" />
 
 
         </LinearLayout>

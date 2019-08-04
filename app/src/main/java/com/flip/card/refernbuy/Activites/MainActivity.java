@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -18,6 +19,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -28,6 +30,7 @@ import com.flip.card.refernbuy.Fragments.ProfileFragment;
 import com.flip.card.refernbuy.Fragments.WholeSaleFragment;
 import com.flip.card.refernbuy.R;
 import com.flip.card.refernbuy.adapters.RecyclerViewDataAdapter;
+import com.flip.card.refernbuy.interfaces.IOnBackPressed;
 import com.flip.card.refernbuy.models.SectionDataModel;
 import com.flip.card.refernbuy.models.SingleItemModel;
 import com.smarteist.autoimageslider.DefaultSliderView;
@@ -42,7 +45,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     public BottomNavigationView bottomNavigationView;
-    SearchView searchView;
+    LinearLayout linearLayout;
 
 
     @Override
@@ -121,17 +124,17 @@ public class MainActivity extends AppCompatActivity
     private void initView() {
 
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
-        searchView = (SearchView)findViewById(R.id.seachview);
+        linearLayout = (LinearLayout) findViewById(R.id.linear);
 
 
     }
 
     public void hideSearch(){
-        searchView.setVisibility(View.GONE);
+        linearLayout.setVisibility(View.GONE);
     }
 
     public void showSearch(){
-        searchView.setVisibility(View.VISIBLE);
+        linearLayout.setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -140,6 +143,11 @@ public class MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
+            super.onBackPressed();
+        }
+
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.main_fragment_container);
+        if (!(fragment instanceof IOnBackPressed) || !((IOnBackPressed) fragment).onBackPressed()) {
             super.onBackPressed();
         }
     }
@@ -200,5 +208,8 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+
 
 }

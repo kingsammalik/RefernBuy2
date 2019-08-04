@@ -9,19 +9,20 @@
 
         <ImageView
             android:id="@+id/img_sub_category"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
             android:gravity="center"
-            android:background="@drawable/apparel"/>
+            android:background="@drawable/nail"/>
 
         <TextView
             android:id="@+id/sub_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/darker_gray"
             android:textSize="13sp"
             android:gravity="center_horizontal"
-            android:text="Product" />
+            android:text="Sub Category" />
 
 
 </LinearLayout>
